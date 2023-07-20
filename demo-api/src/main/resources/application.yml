@@ -1,7 +1,6 @@
 server:
   port: 8080
-mybatis:
-  mapper-locations: classpath:mapper/*.xml
+
 spring:
 #  Mysql
   datasource:

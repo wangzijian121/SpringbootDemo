@@ -1,5 +1,5 @@
 
-package com.example.utils;
+package com.example.api.utils;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

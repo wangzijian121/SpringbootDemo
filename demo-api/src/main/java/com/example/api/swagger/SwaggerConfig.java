@@ -1,4 +1,4 @@
-package com.example.swagger;
+package com.example.api.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,7 +12,7 @@ public class SwaggerConfig {
     public Docket createRestApi() {
         return new Docket(DocumentationType.OAS_30) // v2 不同
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.example.controller")) // 设置扫描路径
+                .apis(RequestHandlerSelectors.basePackage("com.example.api.controller")) // 设置扫描路径
                 .build();
     }
 }

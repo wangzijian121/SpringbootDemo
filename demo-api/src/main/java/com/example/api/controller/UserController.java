@@ -1,8 +1,8 @@
-package com.example.controller;
+package com.example.api.controller;
 
 
 import com.example.dao.entity.User;
-import com.example.service.impl.UserServicesImpl;
+import com.example.api.service.impl.UserServicesImpl;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-
 @Api(tags = "user")
 public class UserController {
     @Autowired
