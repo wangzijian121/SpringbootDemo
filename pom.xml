@@ -44,6 +44,8 @@
         <commons-codec.version>1.12</commons-codec.version>
         <guava.version>23.0</guava.version>
         <springfox-swagger.version>3.0.0</springfox-swagger.version>
+        <spring-boot-starter-log4j2.version>3.1.0</spring-boot-starter-log4j2.version>
+
     </properties>
 
     <dependencyManagement>
@@ -105,6 +107,7 @@
                 <version>${mybatis-plus-boot-starter.version}</version>
             </dependency>
 
+
             <!-- 工具 -->
             <!--Mysql 连接 -->
             <dependency>
@@ -145,6 +148,23 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-boot-starter</artifactId>
                 <version>${springfox-swagger.version}</version>
+            </dependency>
+            <!--使用log4J2 需要排除Springboot 自带的logging -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <!-- 引入log4j2依赖 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-log4j2</artifactId>
+                <version>${spring-boot-starter-log4j2.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
